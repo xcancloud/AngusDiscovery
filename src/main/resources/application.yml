@@ -1,0 +1,73 @@
+server:
+  port: ${DISCOVERY_PORT:1801}
+  servlet:
+    context-path: /
+
+xcan:
+  core:
+    enabled: true
+  idgen:
+    enabled: false
+  datasource:
+    enabled: false
+    commonlink:
+      enabled: false
+  redis:
+    enabled: false
+  auditevents:
+    enabled: false
+
+info:
+  app:
+    name: '@project.name@'
+    editionType: '@editionType@'
+    version: '@project.version@'
+    artifactId: '@artifactId@'
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+    description: '@project.description@'
+    timezone: ${TIMEZONE:Asia/Shanghai}
+    profile: '@profile.active@'
+    runtime: ${RUNTIME:HOST}
+    license: XCan Business License, Version 1.0
+    licenseUrl: http://www.xcan.company/licenses/XCBL-1.0
+    organization: '@organization.name@'
+    organizationUrl: '@organization.url@'
+
+spring:
+  application:
+    name: '@artifactId@'
+  profiles:
+    active: '@profile.active@'
+  jmx:
+    enabled: true
+  main:
+    allow-bean-definition-overriding: true
+    banner-mode: OFF
+  cloud:
+    discovery:
+      client:
+        health-indicator:
+          enabled: true
+          include-description: true
+
+logging:
+  config: classpath:spring-logback.xml
+  level:
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    org.springframework.cloud: WARN
+  file:
+    path: ${LOG_PATH:logs}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+
+#logging.level.com.netflix.eureka=OFF
+#logging.level.com.netflix.discovery=OFF

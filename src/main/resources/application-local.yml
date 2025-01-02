@@ -1,0 +1,34 @@
+spring:
+  security:
+    user:
+      name: ${DISCOVERY_SECURITY_USER_NAME:discovery}
+      password: ${DISCOVERY_SECURITY_USER_PASSD:discovery}
+
+eureka:
+  datacenter: xcan-dc1
+  environment: local
+  client:
+    fetch-registry: false
+    healthcheck:
+      enabled: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://${DISCOVERY_SECURITY_USER_NAME:discovery}:${DISCOVERY_SECURITY_USER_PASSD:discovery}@${DISCOVERY_HOST:local-serv.xcan.cloud}:${DISCOVERY_PORT:1801}/eureka/
+  instance:
+    # Application name registered with Eureka
+    appname: '@artifactId@'
+    # The service client instance name displays the IP address; by default, it displays the hostname + port
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+    metadata-map:
+      startup: ${random.int}
+      datacenter: xcan-dc1
+      environment: dev
+  server:
+    enable-self-preservation: true
+    renewal-percent-threshold: 0.85
+    a-sgcache-expiry-timeout-ms: 300000
+    registry-sync-retry-wait-ms: 3000
+    eviction-interval-timer-in-ms: 5000
+    peer-eureka-nodes-update-interval-ms: 5000
+    renewal-threshold-update-interval-ms: 30000
