@@ -29,7 +29,7 @@ info:
     profile: '@profile.active@'
     runtime: ${RUNTIME:HOST}
     license: XCan Business License, Version 1.0
-    licenseUrl: http://www.xcan.company/licenses/XCBL-1.0
+    licenseUrl: http://www.xcan.cloud/licenses/XCBL-1.0
     organization: '@organization.name@'
     organizationUrl: '@organization.url@'
 

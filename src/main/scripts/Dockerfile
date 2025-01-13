@@ -1,17 +1,17 @@
 #
 # Copyright (c) 2021   XCan Company
 #
-#        http://www.xcan.company
+#        http://www.xcan.cloud
 #
 # Licensed under the XCBL(XCan Business License) Version 1.0.
 # Detail XCBL license at:
 #
-# http://www.xcan.company/licenses/XCBL-1.0
+# http://www.xcan.cloud/licenses/XCBL-1.0
 #
 
 FROM openjdk:11.0.1-jre-slim-stretch
 
-MAINTAINER http://www.xcan.company
+MAINTAINER http://www.xcan.cloud
 
 WORKDIR /
 
