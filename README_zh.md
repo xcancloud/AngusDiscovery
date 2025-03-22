@@ -31,7 +31,7 @@
 ### 🔗 生态集成
 
 - **可视化管控**：与 AngusGM 无缝对接，实时展示注册信息
-- **深度监控**：集成 AngusMetrics，输出 Prometheus 格式指标
+- **深度监控**：集成 Metrics，输出 Prometheus 格式指标
 
 ## 快速部署
 

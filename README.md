@@ -33,7 +33,7 @@ We extend native Eureka APIs with these endpoints:
 ### ✨ Deep Integration with Angus Ecosystem
 
 - **AngusGM Integration**: Visualize registration data through Angus Governance Manager
-- **Monitoring Extension**: Built-in AngusMetrics instrumentation with Prometheus support
+- **Monitoring Extension**: Built-in Metrics instrumentation with Prometheus support
 
 ## Quick Start
 
