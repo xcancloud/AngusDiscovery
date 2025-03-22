@@ -156,6 +156,7 @@ public class CloudJacksonJson extends CodecWrappers.LegacyJacksonJson {
     }
   }
 
+  // Extension Class
   public static class InstanceRegistrySerializer extends JsonSerializer<InstanceRegistry> {
 
     public InstanceRegistrySerializer() {
@@ -163,7 +164,7 @@ public class CloudJacksonJson extends CodecWrappers.LegacyJacksonJson {
 
     @Override
     public void serialize(InstanceRegistry value, JsonGenerator jgen, SerializerProvider provider)
-        throws IOException, JsonProcessingException {
+        throws IOException {
       jgen.writeStartObject();
       jgen.writeStringField("leaseExpirationEnabled", String.valueOf(value.isLeaseExpirationEnabled()));
       jgen.writeObjectField("numOfRenewsPerMinThreshold", value.getNumOfRenewsPerMinThreshold());
