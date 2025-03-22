@@ -5,39 +5,26 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>xcan-sdf</artifactId>
-    <groupId>cloud.xcan.sdf</groupId>
+    <groupId>cloud.xcan.angus</groupId>
+    <artifactId>AngusInfra</artifactId>
     <version>1.0.0</version>
   </parent>
 
-  <artifactId>xcan-discovery.boot</artifactId>
+  <artifactId>AngusDiscovery</artifactId>
   <name>AngusDiscovery</name>
   <version>1.0.0</version>
   <packaging>jar</packaging>
-  <description>XCan Service Discovery based on Eureka. Service registration, discovery, management, and ensure that services provide balance and failover.
+  <description>Service Discovery based on Eureka. Service registration, discovery, management, and ensure that services provide balance and failover.
   </description>
 
   <properties>
-    <xcan-sdf.version>1.0.0</xcan-sdf.version>
+    <xcan-infra.version>1.0.0</xcan-infra.version>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>cloud.xcan.sdf</groupId>
-      <artifactId>xcan-sdf.core</artifactId>
-      <version>${xcan-sdf.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>cloud.xcan.sdf</groupId>
-          <artifactId>xcan-sdf.idgen-core</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>cloud.xcan.sdf</groupId>
-      <artifactId>xcan-spring-cloud-starter-netflix-eureka-server</artifactId>
-      <version>${xcan-spring-cloud-netflix-dependencies.version}</version>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
     </dependency>
 
     <dependency>
@@ -48,22 +35,6 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-tomcat</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-undertow</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.ben-manes.caffeine</groupId>
-      <artifactId>caffeine</artifactId>
     </dependency>
   </dependencies>
 

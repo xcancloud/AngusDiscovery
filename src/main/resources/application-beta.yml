@@ -11,7 +11,7 @@ eureka:
     fetch-registry: false
     healthcheck:
       enabled: true
-    register-with-eureka: true
+    register-with-eureka: false
     serviceUrl:
       defaultZone: http://${DISCOVERY_SECURITY_USER_NAME:discovery}:${DISCOVERY_SECURITY_USER_PASSD:discovery}@${DISCOVERY_HOST:beta-serv.xcan.cloud}:${DISCOVERY_PORT:1801}/eureka/
   instance:
@@ -23,11 +23,6 @@ eureka:
     metadata-map:
       # needed to trigger info and endpoint update after restart
       startup: ${random.int}
-      # These two are needed so that the server can access the protected client endpoints
-      user.name: ${ADMIN_SECURITY_USER_NAME:admin}
-      user.password: ${ADMIN_SECURITY_USER_PASSD:admin}
-      datacenter: xcan-dc1
-      environment: beta
   server:
     enable-self-preservation: true
     renewal-percent-threshold: 0.85

@@ -11,9 +11,9 @@ eureka:
     fetch-registry: false
     healthcheck:
       enabled: true
-    register-with-eureka: true
+    register-with-eureka: false
     serviceUrl:
-      defaultZone: http://${DISCOVERY_SECURITY_USER_NAME:discovery}:${DISCOVERY_SECURITY_USER_PASSD:discovery}@${DISCOVERY_HOST:local-serv.xcan.cloud}:${DISCOVERY_PORT:1801}/eureka/
+      defaultZone: http://${DISCOVERY_SECURITY_USER_NAME:discovery}:${DISCOVERY_SECURITY_USER_PASSD:discovery}@${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:1801}/eureka/
   instance:
     # Application name registered with Eureka
     appname: '@artifactId@'
@@ -22,8 +22,6 @@ eureka:
     prefer-ip-address: true
     metadata-map:
       startup: ${random.int}
-      datacenter: xcan-dc1
-      environment: dev
   server:
     enable-self-preservation: true
     renewal-percent-threshold: 0.85
