@@ -11,6 +11,7 @@
 基于 Spring Cloud Eureka Server 深度定制的分布式服务注册中心，为 Angus 微服务生态提供以下核心能力：
 
 ### 核心功能
+
 - **服务发现**：自动注册与动态发现服务实例
 - **健康监控**：心跳机制实时追踪实例状态
 - **负载均衡**：提供实时可用的服务实例列表
@@ -21,12 +22,14 @@
 ## 核心特性
 
 ### 🚀 增强管理接口
+
 | 端点             | 方法  | 功能描述       | 调用示例                                  |
 |----------------|-----|--------------|----------------------------------------|
 | `/json/status` | GET | 注册中心状态    | `GET http://localhost:1801/json/status` |
 | `/json/lastn`  | GET | 服务续约信息    | `GET http://localhost:1801/json/lastn`  |
 
 ### 🔗 生态集成
+
 - **可视化管控**：与 AngusGM 无缝对接，实时展示注册信息
 - **深度监控**：集成 AngusMetrics，输出 Prometheus 格式指标
 
@@ -50,6 +53,7 @@ java -jar target/AngusDiscovery-1.0.0.jar
 ## 客户端接入
 
 ### 添加依赖
+
 ```xml
 <dependency>
   <groupId>org.springframework.cloud</groupId>
@@ -59,6 +63,7 @@ java -jar target/AngusDiscovery-1.0.0.jar
 ```
 
 ### 配置示例
+
 ```yml
 eureka:
   client:
@@ -81,6 +86,7 @@ eureka:
 ```
 
 ### 验证注册
+
 1. **控制台验证**  
    访问 [http://localhost:1801](http://localhost:1801)  
    使用默认凭证 discovery/discovery 登录，查看实例状态为 `UP`
@@ -89,4 +95,5 @@ eureka:
    在 AngusGM 平台 **系统 > 注册中心** 查看注册状态
 
 ## 开源协议
+
 📜 本项目采用 [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) 开源协议。

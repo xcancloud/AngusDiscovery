@@ -3,6 +3,7 @@ target/
 logs
 tmp
 work
+.DS_Store
 
 ### STS ###
 .apt_generated
