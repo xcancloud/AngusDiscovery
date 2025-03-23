@@ -1,4 +1,4 @@
-package cloud.xcan.sdf.discovery;
+package cloud.xcan.sdf.discovery.config;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
