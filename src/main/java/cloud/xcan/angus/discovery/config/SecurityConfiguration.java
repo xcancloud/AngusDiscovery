@@ -1,4 +1,4 @@
-package cloud.xcan.sdf.discovery.config;
+package cloud.xcan.angus.discovery.config;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
@@ -15,15 +15,13 @@ public class SecurityConfiguration {
 
   @Bean
   public SecurityFilterChain resourceServerFilterChain(HttpSecurity http) throws Exception {
-    http
-        .authorizeHttpRequests(auth -> auth
+    http.authorizeHttpRequests(auth -> auth
             .requestMatchers(
                 "/actuator/**",
                 "/instances/**",
                 "/json/**")
             .permitAll() // Endpoint that does not require authentication
-            .anyRequest().authenticated() // Other requests require authentication
-        )
+            .anyRequest().authenticated()) // Other requests require authentication
         .httpBasic(withDefaults()) // Enable http basic authentication
         .csrf(AbstractHttpConfigurer::disable); // Disable CSRF protection (configure as needed)
     return http.build();

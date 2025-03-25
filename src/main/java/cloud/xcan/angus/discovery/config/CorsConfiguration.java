@@ -1,4 +1,4 @@
-package cloud.xcan.sdf.discovery.config;
+package cloud.xcan.angus.discovery.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

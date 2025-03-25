@@ -1,7 +1,7 @@
-package cloud.xcan.sdf.discovery.config;
+package cloud.xcan.angus.discovery.config;
 
-import cloud.xcan.sdf.core.spring.boot.ApplicationBanner;
-import cloud.xcan.sdf.core.spring.boot.ApplicationInfo;
+import cloud.xcan.angus.core.spring.boot.ApplicationBanner;
+import cloud.xcan.angus.core.spring.boot.ApplicationInfo;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package cloud.xcan.sdf.discovery;
+package cloud.xcan.angus.discovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
