@@ -1,3 +1,4 @@
 org.springframework.context.ApplicationListener=\
   cloud.xcan.angus.discovery.listener.ApplicationReadyListener
-
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  cloud.xcan.angus.core.spring.env.DefaultAngusEnvFileLoader

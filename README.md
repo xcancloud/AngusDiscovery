@@ -83,7 +83,7 @@ eureka:
     # Registry refresh interval (default: 30s)
     registry-fetch-interval-seconds: 10
     serviceUrl:
-      defaultZone: http://${DISCOVERY_SECURITY_USER_NAME:discovery}:${DISCOVERY_SECURITY_USER_PASSD:discovery}@${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:1801}/eureka/
+      defaultZone: http://${DISCOVERY_SECURITY_USER_NAME:discovery}:${DISCOVERY_SECURITY_USER_PASSWORD:discovery}@${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:1801}/eureka/
   instance:
     # Registered application name (uses Maven artifactId)
     appname: '@artifactId@'

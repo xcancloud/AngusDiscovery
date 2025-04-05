@@ -4,6 +4,8 @@ logs
 tmp
 work
 .DS_Store
+.env
+conf/.*env
 
 ### STS ###
 .apt_generated
