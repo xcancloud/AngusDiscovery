@@ -93,7 +93,7 @@ java -jar target/AngusDiscovery-Community-1.0.0.jar
 # 拉去镜像
 docker pull angusdiscovery:1.0.0
 
-# 启动（通过参数 -d 在后台允许）
+# 启动（通过参数 -d 在后台运行）
 docker run --name angusdiscovery -d -p 1801:1801 angusdiscovery:1.0.0 
 ```
 
