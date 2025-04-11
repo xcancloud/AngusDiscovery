@@ -33,23 +33,6 @@
 - **可视化管控**：与 AngusGM 无缝对接，实时展示注册信息
 - **深度监控**：集成 Metrics，输出 Prometheus 格式指标
 
-## 快速部署
-
-### 环境要求
-- JDK 17+
-- Maven 3.6+
-
-```bash
-# 克隆项目
-git clone https://github.com/xcancloud/AngusDiscovery.git
-
-# 构建云服务开发版
-mvn clean package -DskipTests -P dist.cloudService,env.dev
-
-# 启动服务
-java -jar target/AngusDiscovery-1.0.0.jar
-```
-
 ## 客户端接入
 
 ### 添加依赖
@@ -57,7 +40,7 @@ java -jar target/AngusDiscovery-1.0.0.jar
 ```xml
 <dependency>
   <groupId>org.springframework.cloud</groupId>
-  <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+   <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
   <version>4.2.0</version>
 </dependency>
 ```
@@ -83,6 +66,35 @@ eureka:
     prefer-ip-address: true  # 优先显示IP
     status-page-url: http://${spring.cloud.client.ip-address}:${server.port}/swagger-ui/
     health-check-url-path: /actuator/health
+```
+
+## 快速部署
+
+### 环境要求
+- JDK 17+
+- Maven 3.6+
+
+### 以源码方式运行
+
+```bash
+# 克隆项目
+git clone https://github.com/xcancloud/AngusDiscovery.git
+
+# 构建社区版、生产环境版
+mvn clean package -DskipTests -P dist.community,env.prod
+
+# 启动服务
+java -jar target/AngusDiscovery-Community-1.0.0.jar
+```
+
+### 以 Docker 方式运行
+
+```bash
+# 拉去镜像
+docker pull angusdiscovery:1.0.0
+
+# 启动（通过参数 -d 在后台允许）
+docker run --name angusdiscovery -d -p 1801:1801 angusdiscovery:1.0.0 
 ```
 
 ### 验证注册

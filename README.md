@@ -35,26 +35,6 @@ We extend native Eureka APIs with these endpoints:
 - **AngusGM Integration**: Visualize registration data through Angus Governance Manager
 - **Monitoring Extension**: Built-in Metrics instrumentation with Prometheus support
 
-## Quick Start
-
-### Prerequisites
-
-- JDK 17+
-- Maven 3.6+
-
-### Deployment Steps
-
-```bash
-# Clone repository
-git clone https://github.com/xcancloud/AngusDiscovery.git
-
-# Build project (Cloud Service profile, Dev environment)
-mvn clean package -DskipTests -P dist.cloudService,env.dev
-
-# Start service
-java -jar target/AngusDiscovery-1.0.0.jar
-```
-
 ## Client Integration
 
 ### Add Dependency
@@ -62,7 +42,7 @@ java -jar target/AngusDiscovery-1.0.0.jar
 ```xml
 <dependency>
   <groupId>org.springframework.cloud</groupId>
-  <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+  <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
   <version>4.2.0</version>
 </dependency>
 ```
@@ -98,6 +78,36 @@ eureka:
     # Status page configuration
     status-page-url: http://${spring.cloud.client.ip-address}:${server.port}/swagger-ui/
     health-check-url-path: /actuator/health
+```
+
+## Quick Deployment
+
+### Prerequisites
+
+- JDK 17+
+- Maven 3.6+
+
+### Run using the source code
+
+```bash
+# Clone repository
+git clone https://github.com/xcancloud/AngusDiscovery.git
+
+# Build project (Community edition profile, prod environment)
+mvn clean package -DskipTests -P dist.community,env.prod
+
+# Start service
+java -jar target/AngusDiscovery-Community-1.0.0.jar
+```
+
+### Run using Docker
+
+```bash
+# Pull image
+docker pull angusdiscovery:1.0.0
+
+# Run in the background (using the -d flag)
+docker run --name angusdiscovery -d -p 1801:1801 angusdiscovery:1.0.0 
 ```
 
 ### Verify Registration

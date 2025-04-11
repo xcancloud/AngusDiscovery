@@ -10,15 +10,20 @@
     <version>1.0.0</version>
   </parent>
 
-  <artifactId>AngusDiscovery</artifactId>
+  <artifactId>xcan-boot</artifactId>
   <name>AngusDiscovery</name>
   <version>1.0.0</version>
   <packaging>jar</packaging>
-  <description>Service Discovery based on Eureka. Service registration, discovery, management, and ensure that services provide balance and failover.
+  <description>Service Discovery based on Eureka. Service registration, discovery, management, and
+    ensure that services provide balance and failover.
   </description>
 
   <properties>
     <xcan-infra.version>1.0.0</xcan-infra.version>
+
+    <archive.name>discovery</archive.name>
+    <hump.name>AngusDiscovery</hump.name>
+    <docker.image.name>angusdiscovery</docker.image.name>
   </properties>
 
   <dependencies>
@@ -26,6 +31,16 @@
       <groupId>cloud.xcan.angus</groupId>
       <artifactId>xcan-infra.core</artifactId>
       <version>${xcan-infra.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.data</groupId>
+          <artifactId>spring-data-redis</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>io.lettuce</groupId>
+          <artifactId>lettuce-core</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
@@ -45,7 +60,7 @@
   </dependencies>
 
   <build>
-    <finalName>${project.artifactId}-${project.version}</finalName>
+    <finalName>${hump.name}-${editionName}-${project.version}</finalName>
     <filters>
       <filter>src/main/resources/application.yml</filter>
       <filter>src/main/resources/application-${profile.active}.yml</filter>
