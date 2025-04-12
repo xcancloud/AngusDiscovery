@@ -10,7 +10,7 @@
     <version>1.0.0</version>
   </parent>
 
-  <artifactId>xcan-boot</artifactId>
+  <artifactId>xcan-angusdiscovery.boot</artifactId>
   <name>AngusDiscovery</name>
   <version>1.0.0</version>
   <packaging>jar</packaging>
