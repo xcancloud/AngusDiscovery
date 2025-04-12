@@ -21,7 +21,7 @@
 
 ## Extended Features
 
-### ✨ Enhanced RESTful Management APIs
+### ✨ Enhanced RESTFul Management APIs
 
 We extend native Eureka APIs with these endpoints:
 
@@ -121,4 +121,4 @@ docker run --name angusdiscovery -d -p 1801:1801 angusdiscovery:1.0.0
 
 ## License
 
-📜 Licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
+📜 Licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html).
