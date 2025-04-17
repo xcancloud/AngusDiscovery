@@ -18,6 +18,18 @@
     ensure that services provide balance and failover.
   </description>
 
+  <organization>
+    <name>XCan Cloud</name>
+    <url>http://www.xcan.cloud</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>GPLv3</name>
+      <url>https://www.gnu.org/licenses/gpl-3.0.html</url>
+    </license>
+  </licenses>
+
   <properties>
     <xcan-infra.version>1.0.0</xcan-infra.version>
 
