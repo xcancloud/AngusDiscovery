@@ -16,7 +16,7 @@ eureka:
       defaultZone: http://${DISCOVERY_SECURITY_USER_NAME:discovery}:${DISCOVERY_SECURITY_USER_PASSWORD:discovery}@${DISCOVERY_HOST:beta-serv.xcan.cloud}:${DISCOVERY_PORT:1801}/eureka/
   instance:
     # Application name registered with Eureka
-    appname: '@artifactId@'
+    app-name: '@artifactId@'
     # The service client instance name displays the IP address; by default, it displays the hostname + port
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true

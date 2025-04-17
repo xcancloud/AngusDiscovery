@@ -66,7 +66,7 @@ eureka:
       defaultZone: http://${DISCOVERY_SECURITY_USER_NAME:discovery}:${DISCOVERY_SECURITY_USER_PASSWORD:discovery}@${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:1801}/eureka/
   instance:
     # Registered application name (uses Maven artifactId)
-    appname: '@artifactId@'
+    app-name: '@artifactId@'
     # Instance ID format (IP:Port)
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     # Lease expiration time (default: 90s)

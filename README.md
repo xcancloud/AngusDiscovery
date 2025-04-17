@@ -59,7 +59,7 @@ eureka:
       defaultZone: http://${DISCOVERY_USER:discovery}:${DISCOVERY_PWD:discovery}@${DISCOVERY_HOST:localhost}:1801/eureka/
   
   instance:
-    appname: '@artifactId@'  # Maven应用名
+    app-name: '@artifactId@'  # Maven应用名
     instance-id: ${spring.cloud.client.ip-address}:${server.port}  # 实例ID格式
     lease-expiration-duration-in-seconds: 30  # 租约过期时间
     lease-renewal-interval-in-seconds: 10  # 续约间隔
