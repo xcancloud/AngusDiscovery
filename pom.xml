@@ -30,6 +30,19 @@
     </license>
   </licenses>
 
+  <scm>
+    <url>scm:git:https://github.com/xcancloud/AngusDiscovery</url>
+    <connection>scm:git:git@gitlab.xcan.work/xcan-framework/AngusDiscovery.git</connection>
+    <developerConnection>scm:git:https://github.com/xcancloud/AngusDiscovery.git
+    </developerConnection>
+    <tag>${project.version}</tag>
+  </scm>
+
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/xcancloud/AngusDiscovery/-/issues</url>
+  </issueManagement>
+
   <properties>
     <xcan-infra.version>1.0.0</xcan-infra.version>
 
