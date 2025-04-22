@@ -27,8 +27,8 @@ We extend native Eureka APIs with these endpoints:
 
 | Endpoint          | Method | Description                | Example                                      |
 |-------------------|--------|----------------------------|----------------------------------------------|
-| `/json/status`    | GET    | Get registry status        | `GET http://localhost:1801/json/status`      |
-| `/json/lastn`     | GET    | Get renewal information    | `GET http://localhost:1801/json/lastn`       |
+| `/pubapi/v1/status`    | GET    | Get registry status        | `GET http://localhost:1801/pubapi/v1/status`      |
+| `/pubapi/v1/lastn`     | GET    | Get renewal information    | `GET http://localhost:1801/pubapi/v1/lastn`       |
 
 ### ✨ Deep Integration with Angus Ecosystem
 

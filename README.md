@@ -25,8 +25,8 @@
 
 | 端点             | 方法  | 功能描述       | 调用示例                                  |
 |----------------|-----|--------------|----------------------------------------|
-| `/json/status` | GET | 注册中心状态    | `GET http://localhost:1801/json/status` |
-| `/json/lastn`  | GET | 服务续约信息    | `GET http://localhost:1801/json/lastn`  |
+| `/pubapi/v1/status` | GET | 注册中心状态    | `GET http://localhost:1801/pubapi/v1/status` |
+| `/pubapi/v1/lastn`  | GET | 服务续约信息    | `GET http://localhost:1801/pubapi/v1/lastn`  |
 
 ### 🔗 生态集成
 

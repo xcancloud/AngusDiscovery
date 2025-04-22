@@ -82,7 +82,7 @@ public class EurekaController {
   }
 
   // Extension Method
-  @RequestMapping(value = "/json/status", method = RequestMethod.GET,
+  @RequestMapping(value = "/pubapi/v1/status", method = RequestMethod.GET,
       produces = "application/json;charset=UTF-8")
   @ResponseBody
   public String statusRest(HttpServletRequest request, Map<String, Object> model) {
@@ -133,7 +133,7 @@ public class EurekaController {
   }
 
   // Extension Method
-  @RequestMapping(value = "/json/lastn", method = RequestMethod.GET,
+  @RequestMapping(value = "/pubapi/v1/lastn", method = RequestMethod.GET,
       produces = "application/json;charset=UTF-8")
   @ResponseBody
   public String lastnRest(HttpServletRequest request, Map<String, Object> model) {
